@@ -25,6 +25,8 @@ public class Ventana1 extends javax.swing.JFrame {
     }
     private int contador=0;
     private int aciertos=0;
+    private int[]numeros ={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
+        21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49};
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -245,14 +247,15 @@ public class Ventana1 extends javax.swing.JFrame {
         if(contador==6){
             JOptionPane.showMessageDialog(null,"No se pueden añadir más números");
         }
-        else{
-            if(Integer.parseInt(numerosjug.getText())>49){
+        else if(Integer.parseInt(numerosjug.getText())>49){
             JOptionPane.showMessageDialog(null, "Número excedido, recuerda solo números del 1 al 49");   
-        }else
+        }else if(Integer.parseInt(numerosjug.getText())>=0 || Integer.parseInt(numerosjug.getText())<49){
         tablanumerosjug.setValueAt(numerosjug.getText(),0,contador);
         contador++;
+        }
+    
     }//GEN-LAST:event_añadirnumtabMouseClicked
-    }
+    
     /**
      * @param args the command line arguments
      */
